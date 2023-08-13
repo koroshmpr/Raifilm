@@ -1,0 +1,105 @@
+@include media-breakpoint-up(lg) {
+  .cat-link {
+    position: absolute;
+    transform:translateX(50%)!important;
+  }
+  .search-box{
+    //position: absolute;
+    //top: 70px;
+    //right: 120px;
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+  }
+  .page-swiper {
+    padding-right: 100px!important;
+  }
+  .logo-container{
+    position: absolute;
+    z-index: 2;
+    right: 100px;
+    top: 3%;
+  }
+  .main-title, .cat-title {
+    min-height: 160px;
+  }
+  .main-excerpt {
+    min-height: 70px;
+  }
+  .navbar-nav {
+    padding-right: 80px;
+  }
+}
+@include media-breakpoint-down(lg){
+  .search-box{
+    height: fit-content;
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    z-index: 1;
+  }
+  .gform_wrapper.gravity-theme input:not([type=radio]):not([type=checkbox]):not([type=image]):not([type=file]) {
+    line-height: 0!important;
+  }
+  .logo-brand{
+    position: absolute;
+    z-index: 11;
+    left: 10px;
+    top: 13px;
+  }
+  .row-cols-1-5 > * {
+    flex: 0 0 auto;
+    width: 80%;
+  }
+.h-sm-50 {
+  height: 50%;
+}
+.posts_section {
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+  .category-detail_section {
+    transform: translateY(-100%);
+    background: transparent !important;
+    .cat-section {
+      background: black;
+    }
+  }
+}
+@include media-breakpoint-down(xl) {
+}
+@include media-breakpoint-down(sm) {
+  .fs-1 {
+    font-size: calc(1.325rem + 1.4vw) !important;
+  }
+  .fs-2 {
+    font-size: calc(1.275rem + 0.8vw) !important;
+  }
+  .fs-3 {
+    font-size: calc(1.25rem + 0.5vw) !important;
+  }
+  .fs-4 {
+    font-size: calc(1.225rem + 0.2vw) !important;
+  }
+  .fs-5 {
+    font-size: 1.2rem !important;
+  }
+  .fs-6 {
+    font-size: 1rem !important;
+  }
+   p, span {
+    font-size: 0.90rem !important;
+    line-height: 1.7;
+  }
+  small, .small {
+    font-size: 0.875rem !important;
+  }
+}
+
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-down(md) {
+  .cursor {
+    display:none!important
+  }
+}

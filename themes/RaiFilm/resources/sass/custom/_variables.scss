@@ -1,0 +1,54 @@
+//COLOR
+$body-color: #5E6972;
+$body-text: #5E6972;
+$light: rgba(255, 255, 255, 0.5);
+$dark: #000;
+
+
+$gunmetal: #2B303E;
+
+$primary: #f58020;
+$secondary: #F5F5F5;
+$warning: #F4DA92;
+$success: #4BB543;
+$danger :  #C90000;
+$info : #F3F3F3;
+$transparent: #ffffff;
+$primary-half: #6cb1d2;
+
+//border radius
+$border-radius: 15px;
+$border-radius-sm: 20px;
+$border-radius-lg: 30px;
+
+//base class variables
+$transition-base: all .4s;
+$transition-fast: all .2s ease-in-out;
+$transition: all .4s ease-in-out;
+$transition-slow: all .6s;
+
+//FONTS
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-semibold: 800;
+$font-weight-bolder: 900;
+$font-weight-base: $font-weight-normal;
+
+$min-contrast-ratio: 2.5;
+$font-family-base: 'Century Gothic Regular', 'sans-serif', 'Nunito';
+$font-size-base: 1rem * (14/16);
+$small-font-size: .875rem  * (14/16);
+$line-height-base: 1.5;
+$line-height-lg: 1.7;
+$enable-smooth-scroll: true;
+$enable-negative-margins: true;
+$stretched-link-z-index: 1;
+
+
+//link
+$link-decoration: none;
+$link-hover-decoration: none;
+$link-color: #262626;
+//button
+$btn-padding-x : 20px;
+$btn-padding-y : 10px

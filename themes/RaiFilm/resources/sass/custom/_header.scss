@@ -1,0 +1,148 @@
+main {
+  z-index: 2;
+  -webkit-overflow-scrolling: touch;
+  color: $white;
+}
+
+/* The side navigation menu */
+.sidenav {
+  margin-Right: -300px;
+  height: 100%; /* 100% Full-height */
+  width: 300px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 12; /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: #252525; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 120px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  /* The navigation menu links */
+  a {
+    text-transform: uppercase;;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+  }
+}
+.current-menu-item a{
+color:$primary!important
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a {
+  color: white;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closeBtn {
+  position: absolute;
+  top: 40px;
+  left: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+  color: white;
+  &:hover {
+    color:$primary;
+  }
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin .5s ease-in-out;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Add a black background color to the top navigation */
+.topNav {
+  z-index:13;
+  transition: background-color 0.4s ease-in-out;
+  background-color: white;
+  overflow: hidden;
+  width: 80px;
+  p{
+    transition: all 0.4s ease-in-out;
+    text-shadow: -100px 0 0 white;
+  }
+  &.open-nav {
+    overflow:visible;
+    background-color: $primary;
+    p {
+      transform: translateX(100px);
+    }
+  }
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+
+#svg-link {
+  position: relative;
+  &:after {
+    content: " ";
+    transition: background 1s linear 0.5s;
+  }
+  .triangle-logo path , .square-logo , polygon {
+    transition: all 0.7s linear;
+    transform-origin: center;
+  }
+  .triangle-logo path , .square-logo {
+       transform-box: fill-box;
+     }
+  polygon {
+    transform-box: view-box;
+  }
+  &.clicked {
+    &:after {
+      animation: spotlight 3s linear .5s infinite alternate;
+      content: " ";
+      height: 1px;
+      width: 1px;
+      left: -30%;
+      position: absolute;
+      top: -40%;
+      transform: rotate(45deg) translateY(0%);
+      transform-box: fill-box;
+      z-index: -1;
+    }
+    .square-logo {
+      fill: white;
+      transform: rotate(-90deg);
+    }
+    .triangle-logo {
+      path {
+        fill: #5d5d5d;
+        transform: rotate(360deg);
+      }
+      polygon {
+        transform: rotate(-90deg) translate(-3px,-4px);
+        fill:white
+      }
+    }
+  }
+  }
+@keyframes spotlight {
+  0% {
+    box-shadow: 40px 40px 32px 45px rgba(255, 255, 255, 0.53);
+  }
+  50% {
+    box-shadow: 40px 40px 32px 46px rgba(255, 255, 255, 0.42);
+  }
+  100% {
+    box-shadow: 40px 40px 32px 47px rgba(255, 255, 255, 0.27);
+  }
+}

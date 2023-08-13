@@ -1,0 +1,103 @@
+html, body {
+  overflow-x: hidden;
+  background-color: $dark;
+}
+body.modal-open {
+  padding:0!important;
+}
+// SCROLL bar styles
+::-webkit-scrollbar {
+  width: 6px;
+  height: 0;
+}
+.lh-0 {
+  line-height: 0 !important;
+}
+.hover-text:hover {
+  color:white!important
+}
+.background-cover {
+  background-size: cover;
+}
+::-webkit-scrollbar-track {
+  background: $secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 2rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+}
+//custom css
+a {
+  text-decoration: none !important;
+}
+.object-fit {
+  object-fit: cover;
+}
+.object-fit-scale {
+  object-fit: scale-down;
+}
+.overflow-x-scroll {
+  overflow-x:scroll;
+}
+.text-justify {
+  text-align: justify;
+}
+.lazy {
+  transition: all 0.3s ease-in-out;
+}
+.z-1 {
+  z-index: 1;
+}
+.z-2 {
+  z-index: 2;
+}
+.z--1 {
+  z-index: -1;
+}
+.z-top {
+  z-index: 10;
+}
+body , a  , button {
+  cursor: none !important;
+}
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.11);
+  border: 2px dashed $primary;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 100000;
+  transition: transform 0.2s;
+  overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    left: -20%;
+    width: 5px;
+    height: 230%;
+    bottom: 0;
+    top: -50px;
+    z-index: 100;
+    box-shadow: 0 0 1px white;
+    background: linear-gradient(93deg, #f3f3f3 27%, transparent 60%);
+    transform: rotate(15deg);
+    animation: light 0.4s linear forwards 3s alternate;
+  }
+}
+@keyframes light {
+  from{
+    left: 0%;
+  }
+  to {
+    left: 248.4%;
+  }
+
+}
